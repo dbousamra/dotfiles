@@ -9,6 +9,7 @@ brew install zsh
 brew install git
 brew install git-extras
 brew install coreutils
+brew install tmux
 
 # Network tools
 brew install nmap
@@ -22,6 +23,8 @@ brew install tree
 brew install gcal
 brew install cloc
 brew install ack
+brew install httpie
+brew install wrk
 
 # Libraries
 brew install libffi
@@ -37,19 +40,14 @@ brew install rabbitmq
 # Languages
 brew install python3
 brew install python
-brew install scala
+brew install sbt
 brew install ruby
-
-# JavaScript
-brew install flow
 
 # Version managers
 brew install nvm
 
 # Other programs
-brew install macvim
 brew install graphviz
-brew install watchman
 
 # DevOps
 brew install docker

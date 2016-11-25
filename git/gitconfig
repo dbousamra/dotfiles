@@ -1,26 +1,45 @@
-[user]
-    name = David Vuong
-    email =
-
 [color]
     ui = true
-
 [alias]
     s = status
-    graph = log --graph
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-
-[format]
-    pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
-
+    lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    plog = log --graph --oneline --all
+    co = checkout
+    cp = cherry-pick
+    c = commit
+    dc = diff --cached
+    l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    pr = pull --rebase
+    sl = shortlog -ns
+[user]
+    name = Dominic Bou-Samra
+    email = dominic.bou.samra@gmail.com
 [core]
-    # Global ignore list.
-    excludesfile = ~/.gitignore
-
     editor = vim
-
+    excludesfile = /Users/domlebo70/.gitignore_global
+    trustExitCode = true
 [push]
     default = simple
 
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+    tool = Kaleidoscope
+[difftool]
+    compactionHeuristic = true
+    prompt = false
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[mergetool]
+    prompt = false
 [merge]
-    tool = diffmerge
+    tool = Kaleidoscope
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+[help]
+    autocorrect = 1

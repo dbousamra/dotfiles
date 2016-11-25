@@ -2,25 +2,23 @@
 
 brew tap caskroom/versions
 
-brew cask install skype
+brew cask install java
 brew cask install vlc
-brew cask install transmission
 brew cask install google-chrome
-brew cask install firefox
-brew cask install appcleaner
-brew cask install alfred
-brew cask install dropbox
 brew cask install android-file-transfer
-brew cask install the-unarchiver
-brew cask install cyberduck
 brew cask install spotify
 brew cask install virtualbox
-brew cask install mou
-brew cask install atom
-brew cask install pgadmin3
-brew cask install caffeine
 brew cask install vagrant
 brew cask install docker
 brew cask install docker-toolbox
+brew cask install intellij-idea
+brew cask install sublime-text
+brew cask install deluge
+brew cask install psequel
+brew cask install spectacle
+brew cask install unrarx
+brew cask install iterm2
+brew cask install 1password
+brew cask install slack
 
 brew cleanup
